@@ -69,11 +69,6 @@ NAN_METHOD(startbyindex) {
 
 
     Local<Array> options = Local<Array>::Cast(info[1]);
-    if (ind->options != options->Length()) {
-        Nan::ThrowTypeError("Invalid number of options.");
-        return;
-    }
-
 
     double *option_array = get_array(options, 0);
 
