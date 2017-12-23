@@ -130,13 +130,13 @@ NAN_METHOD(callbyindex) {
     }
 
 
-    Local<Array> options = Local<Array>::Cast(info[2]);
-    if (ind->options != 0 && ind->options != options->Length()) {
-        Nan::ThrowTypeError("Invalid number of options.");
-        return;
-    }
-
-
+    // Local<Array> options = Local<Array>::Cast(info[2]);
+    // if (ind->options != 0 && ind->options != options->Length()) {
+    //     Nan::ThrowTypeError("Invalid number of options.");
+    //     return;
+    // }
+    // 
+    // 
 
 
     double *input_arr[TI_MAXINDPARAMS] = {0};
