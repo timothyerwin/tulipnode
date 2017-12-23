@@ -69,8 +69,8 @@ NAN_METHOD(startbyindex) {
 
 
     Local<Array> options = Local<Array>::Cast(info[1]);
-    if (ind->options != options->Length()) {
-        Nan::ThrowTypeError("Invalid number of options. Expected " + ind->options + ", got " + options->Length());
+    if (unsigned ind->options != options->Length()) {
+        Nan::ThrowTypeError("Invalid number of options.");
         return;
     }
 
@@ -131,8 +131,8 @@ NAN_METHOD(callbyindex) {
 
 
     Local<Array> options = Local<Array>::Cast(info[2]);
-    if (ind->options != options->Length()) {
-        Nan::ThrowTypeError("Invalid number of options. Expected " + ind->options + ", got " + options->Length());
+    if (unsigned ind->options != options->Length()) {
+        Nan::ThrowTypeError("Invalid number of options.");
         return;
     }
 
