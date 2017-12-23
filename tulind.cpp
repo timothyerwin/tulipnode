@@ -129,6 +129,10 @@ NAN_METHOD(callbyindex) {
         return;
     }
 
+
+    Local<Array> options = Local<Array>::Cast(info[2]);
+
+
     double *input_arr[TI_MAXINDPARAMS] = {0};
     int in_size = -1;
 
